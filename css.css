@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #fffb00;
-    background-color: #d32626;
+    color: black;
+    background-color: #fff5cc;
     margin: 0;
   }
   
@@ -12,11 +12,12 @@ body {
   h1 {
     font-size: 3rem;
     margin-top: 2rem;
+    font-weight: bold;
   }
   
   /* Navigation Bar */
   .navbar {
-    background-color: #ee8f00;
+    background-color: #ffd11a;
     border-bottom: 1px solid #a11010;
   }
   
@@ -37,6 +38,7 @@ body {
     color: #007bff;
   }
   
+  
   /* Content Section */
   .container {
     max-width: 960px;
@@ -49,7 +51,7 @@ body {
   
   /* Footer */
   .footer {
-    background-color: #84f800;
+    background-color: #ffd11a;
     border-top: 1px solid #e6f700;
     padding: 1rem;
     text-align: center;

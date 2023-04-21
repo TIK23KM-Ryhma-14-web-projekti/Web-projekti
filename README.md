@@ -1,3 +1,8 @@
 # Web-projekti
 
-Jarkko Määttä jarkkomaatta
+Jarkko Määttä - jarkkomaata
+Lassi Toriseva - Hylje35
+Cyndel Ochoa Justo - CyndelO
+Jasmin Karvonen - Jasssu
+Juho-Kalle Klasila - klasila
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/jarkko.css">
+</head>
+
+<body>
+    <h1 class="text-center">Tervetuloa oppimaan!</h1>
+
+    <!---navbar tähän-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Jarkko</a>
+                    <a class="nav-link" href="">2.sivu</a>
+                    <a class="nav-link" href="">3.sivu</a>
+                    <a class="nav-link" href="">4.sivu</a>
+                    <a class="nav-link" href="">5.sivu</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!---sisältöosio-->
+    <div class="container">
+        <div class="row">
+            <div class="col-12 h1 text-center">
+                <p> Tältä sivustolta löydä matematiikka tehtäviä 6.luokkalaisille.</p>
+
+            </div>
+            <div class="col-12 text-center" id="matikka">
+                <p>Paljonko on 389+933?</p>
+                <input type="radio" id="age1" name="age" value="30">
+                <label for="age1">1</label><br>
+                <input type="radio" id="age2" name="age" value="60">
+                <label for="age2">2</label><br>
+                <input type="radio" id="age3" name="age" value="100">
+                <label for="age3">3</label><br><br>
+
+
+            </div>
+
+            <div class="footer">
+                <p>Tässä on Footer</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

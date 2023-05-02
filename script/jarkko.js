@@ -81,8 +81,17 @@ function nextQuestion() {
     q++;
     Array.from(document.querySelectorAll("input[name=choice]:checked"), input => input.checked = false);
     radioButtonEls.forEach(radioButtonEl => radioButtonEl.disabled = false);
-    if(q > answers[4]) {
-        document.getElementById("matikka").innerHTML = "LOPPU!";
+    if(q >= answers[4]) {
+        //document.getElementById("matikka").innerHTML = "LOPPU!";//
+        let points = 0;
+        for(let i = 0; i < answers.length; i++) {
+            if(answers[i] === correctAnswers[i]){
+                points++;
+                console.log(points)
+                document.getElementById("matikka").innerHTML = "LOPPU!<br> Sait " + points + "/5 oikein.";
+            }
+        }
+        return;
     }
     updateElements();
 }

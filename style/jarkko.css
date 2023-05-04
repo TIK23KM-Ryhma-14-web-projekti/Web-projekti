@@ -64,3 +64,12 @@ body {
     height: 300px;
     border: 3px solid black;
   }
+/* Buttons */
+  #check {
+    background-color: turquoise;
+    font-weight: bold;
+  }
+  #next {
+    background-color: lightgreen;
+    font-weight: bold;
+  }

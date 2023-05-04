@@ -17,35 +17,127 @@ const radioButtonEls = document.querySelectorAll('input[type="radio"]');
 //which question
 let q = 0;
 //questions
-const questions = [
-    "Paljonko on 100+100?",
-    "Laske 1000 / 10",
-    "Paljonko on 5 * 5?",
-    "Paljonko on 300-100?",
-    "Paljonko 8 * 7?"
-];
+const questions = [];
 //choices
 const choices = [
-    ["20", "100", "200", "1000", "2000"],
-    ["100", "10", "1", "1000", "0"],
-    ["45", "26", "20", "55", "25"],
-    ["100", "200", "300", "20", "400"],
-    ["56", "47", "64", "45", "36"],
+    [],
+    [],
+    [],
+    [],
+    [],
 ];
 const answers = []; //answers
-const correctAnswers = [2, 0, 4, 1, 0]; //correct answers
+const correctAnswers = []; //correct answers
+
 //feedbacks
-const feedbacks = [
-    "Ota huomioon laskussa nämä",
-    "Tässä laskussa pitää laskea näin ja näin",
-    "Mietippä uudelleen",
-    "Muistele miten jakolaskut lasketaan",
-    "Etkö osaa?"
-];
+const feedbacks = [];
+
+//get random number from 1 to max
+function getNumber(max) {
+    return Math.floor((Math.random() * max) + 1)
+}
+
+//generate questions, choices and correct answers
+function init() {
+    //first question multiplication
+    //generate question
+    let n1 = getNumber(10);
+    let n2 = getNumber(10);
+    questions[0] = "Paljonko on " + n1 + " * " + n2 + "?";
+    //generate random answers
+    choices[0][0] = getNumber(100);
+    choices[0][1] = getNumber(100);
+    choices[0][2] = getNumber(100);
+    choices[0][3] = getNumber(100);
+    choices[0][4] = getNumber(100);
+    //which is the correct answer from the 5 choices
+    correctAnswers[0] = getNumber(5)-1;
+    //replace one choice with correct answer
+    choices[0][correctAnswers[0]] = n1 * n2;
+    feedbacks[0] = "Muistele kertotaulua.";
+
+    //second question sum
+    //generate question
+    let n3 = getNumber(999);
+    let n4 = getNumber(999);
+    questions[1] = "Paljonko on " + n3 + " + " + n4 + "?";
+    //generate random answers
+    choices[1][0] = getNumber(1999);
+    choices[1][1] = getNumber(1999);
+    choices[1][2] = getNumber(1999);
+    choices[1][3] = getNumber(1999);
+    choices[1][4] = getNumber(1999);
+    //which is the correct answer from the 5 choices
+    correctAnswers[1] = getNumber(5)-1;
+    //replace one choice with correct answer
+    choices[1][correctAnswers[1]] = n3 + n4;
+    feedbacks[1] = "Hupsis, ensi kerralla tarkkana yhteenlaskuissa."
+
+    //thrid question subtraction
+    //generate question
+    let n5 = 500 + getNumber(499);
+    let n6 = getNumber(499);
+    questions[2] = "Paljonko on " + n5 + " - " + n6 + "?";
+    //generate random answers
+    choices[2][0] = getNumber(999);
+    choices[2][1] = getNumber(999);
+    choices[2][2] = getNumber(999);
+    choices[2][3] = getNumber(999);
+    choices[2][4] = getNumber(999);
+    //which is the correct answer from the 5 choices
+    correctAnswers[2] = getNumber(5)-1;
+    //replace one choice with correct answer
+    choices[2][correctAnswers[2]] = n5 - n6;
+    feedbacks[2] = "Vähennyslaskussa on hyvä olla huolellinen."
+
+    //fourth question
+    //generate question
+    let n7 = getNumber(10);
+    let n8 = getNumber(10);
+    questions[3] = "Paljonko on " + n7 + " * " + n8 + "?";
+    //generate random answers
+    choices[3][0] = getNumber(100);
+    choices[3][1] = getNumber(100);
+    choices[3][2] = getNumber(100);
+    choices[3][3] = getNumber(100);
+    choices[3][4] = getNumber(100);
+    //which is the correct answer from the 5 choices
+    correctAnswers[3] = getNumber(5)-1;
+    //replace one choice with correct answer
+    choices[3][correctAnswers[3]] = n7 * n8;
+    feedbacks[3] = "Väärä vastaus, harjoitus tekee mestarin";
+
+    //fifth question sum
+    //generate question
+    let n9 = getNumber(999);
+    let n10 = getNumber(999);
+    questions[4] = "Paljonko on " + n9 + " + " + n10 + "?";
+    //generate random answers
+    choices[4][0] = getNumber(1999);
+    choices[4][1] = getNumber(1999);
+    choices[4][2] = getNumber(1999);
+    choices[4][3] = getNumber(1999);
+    choices[4][4] = getNumber(1999);
+    //which is the correct answer from the 5 choices
+    correctAnswers[4] = getNumber(5)-1;
+    //replace one choice with correct answer
+    choices[4][correctAnswers[4]] = n9 + n10;
+    feedbacks[4] = "Hupsis, ensi kerralla tarkkana yhteenlaskuissa."
+}
 //update questions & choices
 function updateElements(){
+    if(q === 5) {
+        let points = 0;
+        for(let i = 0; i < answers.length; i++) {
+            if(answers[i] === correctAnswers[i]){
+                points++;
+            }
+        }
+        document.getElementById("matikka").innerHTML = "LOPPU!<br> Sait " + points + "/5 oikein.";
+        return;
+    }
     //show question
-    questionEl.innerHTML = "Kysymys " + (q+1) + "/5<br>" + questions[q];
+    questionEl.innerHTML = "Kysymys " + (q+1) + "/5<br>" + "Tarkista vastaus ja siirry seuraavaan. <br>" + questions[q];
     //show choices
     choice1El.innerHTML = choices[q][0];
     choice2El.innerHTML = choices[q][1];
@@ -60,6 +152,15 @@ function updateElements(){
     } else {
         feedbackEl.innerHTML = feedbacks[q]; //wrong answer
     }
+    if(answers[q] === undefined) {
+        checkEl.disabled = false;
+        nextEl.disabled = true;
+    }else {
+        checkEl.disabled = true;
+        nextEl.disabled = false;
+    }
+
+    
 }
 //check button
 checkEl.addEventListener("click", checkAnswer);
@@ -81,18 +182,8 @@ function nextQuestion() {
     q++;
     Array.from(document.querySelectorAll("input[name=choice]:checked"), input => input.checked = false);
     radioButtonEls.forEach(radioButtonEl => radioButtonEl.disabled = false);
-    if(q >= answers[4]) {
-        //document.getElementById("matikka").innerHTML = "LOPPU!";//
-        let points = 0;
-        for(let i = 0; i < answers.length; i++) {
-            if(answers[i] === correctAnswers[i]){
-                points++;
-                console.log(points)
-                document.getElementById("matikka").innerHTML = "LOPPU!<br> Sait " + points + "/5 oikein.";
-            }
-        }
-        return;
-    }
+    
     updateElements();
 }
+init();
 updateElements();

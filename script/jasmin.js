@@ -71,11 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Display score and correct/incorrect answers
         let resultDiv = document.getElementById('result');
-        resultDiv.innerHTML = 'Sinä sait ' + score + ' oikein 5:stä!<br>';
+        resultDiv.innerHTML = 'Sinä sait ' + score + ' oikein 4:stä!<br>';
         if (correctAnswers.length > 0) {
             resultDiv.innerHTML += 'Oikeat vastaukset: ' + correctAnswers.join(', ') + '<br>';
         }
-        if (incorrectAnswers.length > 0) {
+        else (incorrectAnswers.length > 0) {
             resultDiv.innerHTML += 'Väärät vastaukset: ' + incorrectAnswers.join(', ');
         }
     });

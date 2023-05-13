@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let q2 = document.querySelector('input[name="q2"]:checked');
         let q3 = document.querySelector('input[name="q3"]:checked');
         let q4 = document.querySelector('input[name="q4"]:checked');
-        let q5 = document.querySelector('input[name="q5"]:checked');
 
         // Calculate score and record incorrect and correct answers
         let score = 0;

@@ -60,14 +60,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 incorrectAnswers.push(4);
             }
         }
-        if (q5) {
-            if (q5.value === 'c') {
-                score++;
-                correctAnswers.push(5);
-            } else {
-                incorrectAnswers.push(5);
-            }
-        }
 
         // Display score and correct/incorrect answers
         let resultDiv = document.getElementById('result');

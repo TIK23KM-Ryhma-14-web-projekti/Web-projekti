@@ -35,10 +35,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (q1.value === 'a') {
                 score++;
                 correctAnswers.push(1);
-                feedback.textContent = "oikein";
             } else {
                 incorrectAnswers.push(1);
-                feedback.textContent = "väärin";
             }
         }
         if (q2) {

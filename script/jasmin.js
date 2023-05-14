@@ -29,8 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
         let incorrectAnswers = [];
         let correctAnswers = [];
 
-        feedback.textContent = "";
-
         if (q1) {
             if (q1.value === 'a') {
                 score++;

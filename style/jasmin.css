@@ -23,8 +23,11 @@ body {
     color: red;
     }
   .C{
-      color: rgb(205, 187, 50);
+      color: rgb(223, 202, 44);
       }
+  .D{
+    color: purple;
+    }
   
   /* Navigation Bar */
   .navbar {

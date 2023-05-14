@@ -19,9 +19,12 @@ body {
   .A{
     color: blue;
     }
-    .B{
+  .B{
     color: red;
     }
+  .C{
+      color: yellow;
+      }
   
   /* Navigation Bar */
   .navbar {

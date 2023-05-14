@@ -70,8 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (correctAnswers.length > 0) {
             resultDiv.innerHTML += 'Oikeat vastaukset: ' + correctAnswers.join(', ') + '<br>';
         }
-        else (incorrectAnswers.length > 0) {
+        else (incorrectAnswers.length > 0) ;{
             resultDiv.innerHTML += 'Väärät vastaukset: ' + incorrectAnswers.join(', ');
         }
+    
     });
 });

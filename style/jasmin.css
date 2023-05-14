@@ -15,6 +15,13 @@ body {
     font-weight: bold;
     color: orangered;
   }
+
+  .A{
+    color: blue;
+    }
+    .B{
+    color: green;
+    }
   
   /* Navigation Bar */
   .navbar {

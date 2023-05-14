@@ -28,12 +28,17 @@ document.addEventListener('DOMContentLoaded', function() {
         let score = 0;
         let incorrectAnswers = [];
         let correctAnswers = [];
+
+        feedback.textContent = "";
+
         if (q1) {
             if (q1.value === 'a') {
                 score++;
                 correctAnswers.push(1);
+                feedback.textContent = "oikein";
             } else {
                 incorrectAnswers.push(1);
+                feedback.textContent = "väärin";
             }
         }
         if (q2) {

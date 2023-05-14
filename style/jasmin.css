@@ -10,7 +10,7 @@ body {
   
   /* Header */
   h1 {
-    font-size: 5rem;
+    font-size: rem;
     margin-top: 2rem;
     font-weight: bold;
   }

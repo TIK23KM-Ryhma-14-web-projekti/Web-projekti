@@ -4,10 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let form = document.getElementById('quiz-form');
     let questions = Array.from(document.querySelectorAll('.question'));
 
-    const feedbackEl = document.getElementById("feedback");
-    //buttons
-    const checkEl = document.getElementById("check");
-
     // Shuffle the questions
     questions.sort(function() {
         return 0.5 - Math.random();

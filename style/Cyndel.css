@@ -14,7 +14,17 @@ body {
     margin-top: 2rem;
     font-weight: bold;
   }
+   h2 {
+    color: #5f6512;
+   }
   
+   p {
+    font-weight: bold;
+   }
+
+  form, label {
+    text-align: center;
+   }
   /* Navigation Bar */
   .navbar {
     background-color: #558b78;

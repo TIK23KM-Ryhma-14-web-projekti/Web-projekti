@@ -24,7 +24,7 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Jarkko</a>
+                    <a class="nav-link active" aria-current="page" href="#">Matematiikka</a>
                     <a class="nav-link" href="">2.sivu</a>
                     <a class="nav-link" href="">3.sivu</a>
                     <a class="nav-link" href="">4.sivu</a>
@@ -39,67 +39,90 @@
         <div class="row">
             <div class="col-12 text-center">
                 <h1> Eläinten tunnistus tehtävä</h1>
-                <p>Tässä tehtävässä on sinun tehtävänäsi tunnistaa eläimiä. Valitse vaihtoehtosi ja tarkista vastauksesi painamalla tarkista nappulaa.</p>
+                <p>Tässä tehtävässä on sinun tehtävänäsi tunnistaa eläimiä. Valitse vaihtoehtosi ja tarkista vastauksesi painamalla tarkista nappulaa.<br>
+                Vastauksesi on oikein jos nappulan väri muuttuu vihreäksi. Väärästä vastauksesta nappulan väri muuttuu punaiseksi.</p>
             </div>
         <div class="row">
             <div class="col-3">
-                <img src="../kuvat/gorilla.jpg" class="img-fluid">
+                <img src="../kuvat/gorilla.jpg" class="img-fluid" id="gorilla">
             </div>
             <div class="col-3">
-                <img src="../kuvat/kirahvi1.jpg" class="img-fluid">
+                <img src="../kuvat/kirahvi1.jpg" class="img-fluid" id="kirahvi">
             </div>
             <div class="col-3">
-                <img src="../kuvat/norsu.jpg" class="img-fluid">
+                <img src="../kuvat/norsu.jpg" class="img-fluid" id="norsu">
             </div>
             <div class="col-3">
-                <img src="../kuvat/tiikeri.jpg" class="img-fluid">
+                <img src="../kuvat/tiikeri.jpg" class="img-fluid" id="tiikeri">
             </div>
         </div>
+        <div class="col-3">
+            <form>
+            <input type="radio" id="radio1" name="choice" value="0" onclick="answer(0)">
+            <label for="radio1" id="choice1">Gorilla</label><br>
+            <input type="radio" id="radio2" name="choice" value="1" onclick="answer(1)">
+            <label for="radio2" id="choice2">Leijona</label><br>
+            <input type="radio" id="radio3" name="choice" value="2" onclick="answer(2)">
+            <label for="radio3" id="choice3">Kojootti</label><br>
+            <input type="radio" id="radio4" name="choice" value="3" onclick="answer(3)">
+            <label for="radio4" id="choice4">Flamengo</label><br>
+            </form>
+        </div>
+        <div class="col-3">
+            <form>
+            <input type="radio" id="radio1" name="choice" value="1" onclick="answer(1)">
+            <label for="radio1" id="choice5">Kotka</label><br>
+            <input type="radio" id="radio6" name="choice" value="0" onclick="answer(0)">
+            <label for="radio2" id="choice6">Kirahvi</label><br>
+            <input type="radio" id="radio7" name="choice" value="2" onclick="answer(2)">
+            <label for="radio3" id="choice7">Biisoni</label><br>
+            <input type="radio" id="radio8" name="choice" value="3" onclick="answer(3)">
+            <label for="radio4" id="choice8">Karhu</label><br>
+            </form>
+        </div>
+        <div class="col-3">
+            <form>
+            <input type="radio" id="radio1" name="choice" value="2" onclick="answer(2)">
+            <label for="radio1" id="choice9">Tiikeri</label><br>
+            <input type="radio" id="radio10" name="choice" value="1" onclick="answer(1)">
+            <label for="radio2" id="choice10">Susi</label><br>
+            <input type="radio" id="radio11" name="choice" value="0" onclick="answer(0)">
+            <label for="radio3" id="choice11">Norsu</label><br>
+            <input type="radio" id="radio12" name="choice" value="3" onclick="answer(3)">
+            <label for="radio4" id="choice12">Valas</label><br>
+        </form>
+        </div>
+        <div class="col-3">
+            <form>
+            <input type="radio" id="radio1" name="choice" value="2" onclick="answer(2)">
+            <label for="radio1" id="choice13">Hyeena</label><br>
+            <input type="radio" id="radio2" name="choice" value="1" onclick="answer(1)">
+            <label for="radio2" id="choice14">Dinosaurus</label><br>
+            <input type="radio" id="radio3" name="choice" value="0" onclick="answer(0)">
+            <label for="radio3" id="choice4">Tiikeri</label><br>
+            <input type="radio" id="radio5" name="choice" value="3" onclick="answer(3)">
+            <label for="radio4" id="choice16">Virtahepo</label><br>
+        </form>
+        </div>
+            
+    </div>
         <div class="row">
-            <div class="col">
-                <input type="radio" id="radio1" name="choice" value="0">
-                <label for="radio1" id="choice1">Gorilla</label><br>
-                <input type="radio" id="radio2" name="choice" value="1">
-                <label for="radio2" id="choice2">Leijona</label><br>
-                <input type="radio" id="radio3" name="choice" value="2">
-                <label for="radio3" id="choice3">Kojootti</label><br>
-                <input type="radio" id="radio4" name="choice" value="3">
-                <label for="radio4" id="choice4">Flamengo</label><br>
-            </div>
-            <div class="col">
-                <input type="radio" id="radio5" name="choice" value="4">
-                <label for="radio1" id="choice5">Kotka</label><br>
-                <input type="radio" id="radio6" name="choice" value="5">
-                <label for="radio2" id="choice6">Kirahvi</label><br>
-                <input type="radio" id="radio7" name="choice" value="6">
-                <label for="radio3" id="choice7">Biisoni</label><br>
-                <input type="radio" id="radio8" name="choice" value="7">
-                <label for="radio4" id="choice8">Karhu</label><br>
-            </div>
-            <div class="col">
-                <input type="radio" id="radio9" name="choice" value="8">
-                <label for="radio1" id="choice9">Tiikeri</label><br>
-                <input type="radio" id="radio10" name="choice" value="9">
-                <label for="radio2" id="choice10">Susi</label><br>
-                <input type="radio" id="radio11" name="choice" value="10">
-                <label for="radio3" id="choice11">Norsu</label><br>
-                <input type="radio" id="radio12" name="choice" value="11">
-                <label for="radio4" id="choice12">Valas</label><br>
-            </div>
-            <div class="col">
-                <input type="radio" id="radio13" name="choice" value="12">
-                <label for="radio1" id="choice13">Hyeena</label><br>
-                <input type="radio" id="radio14" name="choice" value="13">
-                <label for="radio2" id="choice14">Dinosaurus</label><br>
-                <input type="radio" id="radio15" name="choice" value="14">
-                <label for="radio3" id="choice15">Tiikeri</label><br>
-                <input type="radio" id="radio16" name="choice" value="15">
-                <label for="radio4" id="choice16">Virtahepo</label><br>
-            </div>
+            <div class="col text-center">
+                
+            </div>    
         </div>
         <div class="row pt-3">
-            <div class="col text-center">
-                <button type="button" class="btn btn-warning" id="tarkista">Tarkista</button>
+            <div class="col-3 text-start">
+                <button type="button" class="btn btn-warning" id="tarkista1"><p class="m-0" id="palaute">Tarkista</p></button>
+            </div>
+            <div class="col-3 text-start">
+                <button type="button" class="btn btn-warning" id="tarkista2"><p class="m-0" id="palaute">Tarkista</p></button>
+            </div>
+            <div class="col-3 text-start">
+                <button type="button" class="btn btn-warning" id="tarkista3"><p class="m-0" id="palaute">Tarkista</p></button>
+            </div>
+            <div class="col-3 text-start">
+                <button type="button" class="btn btn-warning" id="tarkista4"><p class="m-0" id="palaute">Tarkista</p></button>
             </div>
         </div>
 
@@ -111,7 +134,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
-    <script src="../script/jarkko.js"></script>
+    <script src="../script/lassi.js"></script>
 </body>
 
 </html>

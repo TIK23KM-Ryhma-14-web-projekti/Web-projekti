@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let score = 0;
         let incorrectAnswers = [];
         let correctAnswers = [];
+
         if (q1) {
             if (q1.value === 'a') {
                 score++;
@@ -70,5 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
         else (incorrectAnswers.length > 0) {
             resultDiv.innerHTML += 'Väärät vastaukset: ' + incorrectAnswers.join(', ');
         }
+    
     });
 });

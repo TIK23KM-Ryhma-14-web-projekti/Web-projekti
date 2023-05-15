@@ -14,6 +14,28 @@ body {
     margin-top: 2rem;
     font-weight: bold;
   }
+
+  .A{
+    color: blue;
+    }
+  .B{
+    color: red;
+    }
+  .C{
+      color: rgb(223, 202, 44);
+      }
+  .D{
+    color: purple;
+    }
+  .E{
+    color: green;
+    }
+  .F{
+  color: orange;
+    }
+  .G{
+    color: brown;
+    }
   
   /* Navigation Bar */
   .navbar {
@@ -63,4 +85,6 @@ body {
   .quiz-form {
     font-size: 1.5em;
   }
+
+
 

@@ -59,6 +59,9 @@ body {
     left: 0;
     bottom: 0;
   }
+  #footertxt {
+    color: #ffd11a;
+  }
 /* Matematiikka */
 #matikka{
     height: 300px;
